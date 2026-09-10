@@ -1,0 +1,21 @@
+.financial-app-screen { position: absolute; inset: 0 0 12px; overflow: clip; border-radius: 43px 43px 34px 34px; background: #f5f8f6; color: #23342b; }
+.financial-app-header { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; padding: 46px 18px 12px; background: #0c543b; color: white; }
+.financial-app-header strong { display: block; font-size: var(--phone-header-size); font-weight: var(--phone-heading-weight); }
+.financial-app-header small { display: block; margin-top: 2px; font-size: var(--phone-body-size); color: #c0d4c9; }
+.financial-app-body { padding: 0 14px 12px; }
+.financial-adjustment-note { margin: -8px 0 14px; padding: 0 14px 12px; border: 1px solid #dfe4e1; border-top: 0; border-radius: 0 0 16px 16px; background: white; color: #7c857e; font-size: var(--phone-body-size); line-height: 1.5; }
+.financial-qr-card { padding: 16px 17px; border: 1px solid #dfe4e1; border-radius: 16px; background: white; }
+.financial-qr-card h3 { margin: 0 0 14px; font-size: var(--phone-body-size); font-weight: var(--phone-heading-weight); text-align: center; line-height: 1.6; }
+.financial-qr-preview { width: 180px; max-width: 100%; margin: 0 auto; padding: 23px; border: 1px solid #dfe4e1; border-radius: 10px; }
+/* Display the QR from the supplied reference without recreating its payment data. */
+.financial-qr-crop { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; }
+.financial-qr-crop img { position: absolute; width: 193.46%; max-width: none; height: auto; left: -47.05%; top: -134.18%; }
+.financial-share-preview { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 12px; padding: 10px 5px; border: 1px solid #0c543b; border-radius: 10px; color: #0c543b; font-size: var(--phone-body-size); font-weight: var(--phone-heading-weight); }
+.financial-payment-details { display: grid; gap: 9px; margin: 16px 0 0; font-size: var(--phone-body-size); }
+.financial-payment-details > div { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.financial-payment-details dt { color: #7c857e; }
+.financial-payment-details dd { margin: 0; font-weight: var(--phone-heading-weight); color: #28332c; }
+.financial-payment-details > div:first-child dd { color: #0c543b; font-size: var(--phone-heading-size); }
+.financial-qr-card > p { margin: 13px 0 0; font-size: var(--phone-body-size); color: #7c857e; line-height: 1.5; }
+.financial-upload-preview { margin-top: 14px; padding: 12px 6px; border-radius: 12px; background: #1ca675; color: white; text-align: center; font-size: var(--phone-header-size); font-weight: var(--phone-heading-weight); }
+.financial-cancel-preview { margin-top: 17px; text-align: center; font-size: var(--phone-body-size); color: #dd585c; }

@@ -1,0 +1,16 @@
+.registration-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); align-items: start; gap: 36px; max-width: 1120px; margin: 0 auto 12px; padding: 16px 0; }
+.registration-content h2 { margin: 0; color: #10251b; font-size: clamp(24px, 2.2vw, 30px); font-weight: 600; line-height: 1.35; }
+.registration-content h2 span { color: #08783f; }
+.registration-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 0; margin: 0; list-style: none; }
+.registration-step { min-width: 0; }
+.registration-step-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.registration-step-icon { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e0f0e6; color: #08783f; }
+.registration-step-number { font-size: 13px; font-weight: 500; color: #b5cebf; }
+.registration-step h3 { margin: 0 0 9px; color: #23342b; font-size: 15px; font-weight: 500; }
+.registration-step p { margin: 0; color: #718078; font-size: 12px; line-height: 1.85; }
+@media (max-width: 960px) {
+  .registration-section { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 680px) {
+  .registration-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+}

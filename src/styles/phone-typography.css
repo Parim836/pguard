@@ -1,0 +1,24 @@
+:root {
+  --phone-font-family: "Mitr", sans-serif;
+  --phone-body-size: 12px;
+  --phone-header-size: 13px;
+  --phone-heading-size: 15px;
+  --phone-score-size: 42px;
+  --phone-body-weight: 400;
+  --phone-heading-weight: 500;
+}
+
+:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) {
+  font-family: var(--phone-font-family);
+  font-size: var(--phone-body-size);
+  font-weight: var(--phone-body-weight);
+}
+
+:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) :where(button, input, textarea, small) {
+  font-family: var(--phone-font-family);
+  font-size: var(--phone-body-size);
+}
+
+:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) :where(strong, b) {
+  font-weight: var(--phone-heading-weight);
+}

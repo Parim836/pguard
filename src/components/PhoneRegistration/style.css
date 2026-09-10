@@ -1,0 +1,16 @@
+.registration-app-screen { position: absolute; inset: 62px 0 12px; display: flex; flex-direction: column; overflow: auto; scrollbar-width: none; padding: 10px 16px 18px; border-radius: 0 0 34px 34px; background: #f5f8f6; color: #23342b; }
+.registration-app-screen::-webkit-scrollbar { display: none; }
+.registration-app-screen > svg { flex-shrink: 0; }
+.registration-app-progress { display: flex; gap: 5px; margin: 20px 0 12px; }
+.registration-app-progress span { flex: 1; height: 4px; border-radius: 4px; background: #e4ebe6; }
+.registration-app-progress span:nth-child(-n+2) { background: #16a06b; }
+.registration-app-step { font-size: var(--phone-body-size); color: #08783f; }
+.registration-app-screen h3 { margin: 5px 0 8px; font-size: var(--phone-heading-size); font-weight: var(--phone-heading-weight); }
+.registration-app-screen > p { margin: 0 0 17px; font-size: var(--phone-body-size); line-height: 1.8; color: #718078; }
+.registration-document-list { margin-bottom: 20px; }
+.registration-document-row { display: flex; align-items: center; gap: 8px; padding: 13px 0; border-bottom: 1px solid #e1eae4; }
+.registration-upload-icon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 40px; height: 36px; border: 1px solid #bdcec4; border-radius: 8px; color: #7b9486; }
+.registration-document-row strong { display: block; font-size: var(--phone-body-size); font-weight: var(--phone-heading-weight); }
+.registration-document-row small { display: block; margin-top: 4px; font-size: var(--phone-body-size); color: #718078; }
+.registration-upload-label { margin-left: auto; font-size: var(--phone-body-size); color: #08783f; }
+.registration-next-preview { margin-top: auto; padding: 12px; border-radius: 11px; background: #16a06b; color: white; text-align: center; font-size: var(--phone-body-size); }

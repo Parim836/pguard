@@ -1,0 +1,21 @@
+:root {
+  --description-font: "Mitr", sans-serif;
+  --description-size: 16px;
+  --description-weight: 300;
+  --description-line-height: 1.8;
+}
+
+/* Match the Home hero description across pages, including responsive layouts.
+   Phone previews retain their own compact app typography. Keep existing colors. */
+#root .app p:not(:where(.smart-search-phone *, .phone3d-wrapper *, .phone3d-scene *)),
+#root .app :is(
+  .business-feature > span:not(.business-feature-number),
+  .requirement-item > span,
+  .document-tip-content > span,
+  .documents-trust-text > span
+) {
+  font-family: var(--description-font);
+  font-size: var(--description-size);
+  font-weight: var(--description-weight);
+  line-height: var(--description-line-height);
+}
