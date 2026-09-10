@@ -614,16 +614,6 @@ function Home() {
                 />{t("ดาวน์โหลดแอป")}</a>
 
 
-              <Link
-                className="btn outline"
-                to="/how-it-works"
-              >{t("ดูวิธีการใช้งาน")}<ArrowRight
-                  size={18}
-                />
-
-              </Link>
-
-
             </div>
 
 
