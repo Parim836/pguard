@@ -1,6 +1,5 @@
 import { BadgeCheck, Clock3, RotateCcw, ScanLine } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
-import FinancialPhone from "./PhoneFinancial";
 import "./styles/Financial.css";
 
 export default function Financial() {
@@ -33,9 +32,6 @@ export default function Financial() {
   ];
   return (
     <section className="financial-section" aria-labelledby="financial-title">
-      <div className="financial-visual">
-        <FinancialPhone />
-      </div>
       <div className="financial-content">
         <h2 id="financial-title">
           {t("ชำระเงินอย่างมั่นใจ")}

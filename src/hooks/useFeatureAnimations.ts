@@ -41,12 +41,51 @@ export default function useFeatureAnimations(
             );
           });
 
+        const payment = section.querySelector(".financial-section");
+        if (payment) {
+          gsap.fromTo(
+            payment.querySelectorAll(
+              ".financial-content > h2, .financial-lead",
+            ),
+            { opacity: 0, y: 24 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              stagger: 0.14,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: payment,
+                start: "top 85%",
+                toggleActions: "play none none reverse",
+                invalidateOnRefresh: true,
+              },
+            },
+          );
+          gsap.fromTo(
+            payment.querySelectorAll(".financial-card"),
+            { opacity: 0, y: 32 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.65,
+              stagger: 0.14,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: payment.querySelector(".financial-grid"),
+                start: "top 88%",
+                toggleActions: "play none none reverse",
+                invalidateOnRefresh: true,
+              },
+            },
+          );
+        }
+
         const content = section.querySelectorAll(
           ".smart-search-content > :not(.smart-search-features), .smart-search-feature, " +
             ".registration-content > :not(.registration-steps), .registration-step, " +
             ".hourly-report-content > :not(.hourly-report-grid), .hourly-report-card, " +
-            ".rating-content > :not(.rating-benefits), .rating-benefits > div, " +
-            ".financial-content > :not(.financial-grid), .financial-card",
+            ".rating-content > :not(.rating-benefits), .rating-benefits > div",
         );
 
         content.forEach((element) => {

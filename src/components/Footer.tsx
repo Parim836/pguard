@@ -63,7 +63,7 @@ function Footer() {
           <div className="footer-column">
             <b>{t("บริการ")}</b>
 
-            <Link to="/features">{t("ฟีเจอร์")}</Link>
+            <Link to="/documents">{t("ตัวอย่างเอกสาร")}</Link>
 
             <Link to="/business">{t("สำหรับธุรกิจ")}</Link>
 
