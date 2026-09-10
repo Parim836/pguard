@@ -27,8 +27,8 @@ export default function FinancialPhone() {
               <div className="financial-qr-preview">
                 <div className="financial-qr-crop">
                   <img
-                    src="/financial-payment-reference.jpg"
-                    alt="PromptPay QR"
+                    src="/images/demo-payment-qr.svg"
+                    alt="Demo QR - not for payment"
                   />
                 </div>
               </div>
@@ -43,7 +43,7 @@ export default function FinancialPhone() {
                 </div>
                 <div>
                   <dt>{t("บัญชีรับเงิน")}</dt>
-                  <dd>086-320-8235</dd>
+                  <dd>000-000-0000</dd>
                 </div>
               </dl>
               <p>
