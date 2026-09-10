@@ -1,0 +1,414 @@
+@media (max-width: 800px) {
+  .page-head {
+    padding: 30px 0 20px;
+  }
+
+  .page-head h1 {
+    font-size: 30px;
+  }
+
+  .page-head p {
+    font-size: 12px;
+  }
+
+  .documents-page {
+    padding: 0 12px 25px;
+  }
+
+  .documents-steps {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    margin: 20px 0 20px;
+  }
+
+  .document-step {
+    min-height: 64px;
+
+    padding: 10px 12px;
+
+    border-radius: 15px;
+  }
+
+  .document-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .document-step.active::before {
+    display: none;
+  }
+
+  .document-step-number {
+    width: 34px;
+    height: 34px;
+
+    margin-right: 8px;
+
+    font-size: 12px;
+  }
+
+  .document-step-icon {
+    flex-basis: 34px;
+
+    width: 34px;
+    height: 34px;
+
+    margin-right: 8px;
+  }
+
+  .document-step-title {
+    font-size: 12px;
+  }
+
+  .document-preview {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    border-radius: 20px;
+  }
+
+  .document-preview-info {
+    padding: 28px 22px 24px;
+  }
+
+  .document-preview-info h2 {
+    font-size: 27px;
+  }
+
+  .document-description {
+    font-size: 12px;
+  }
+
+  .document-requirements {
+    margin-top: 22px;
+  }
+
+  .document-requirements h3 {
+    font-size: 14px;
+  }
+
+  .requirement-item {
+    font-size: 12px;
+  }
+
+  .document-preview-visual {
+    border-left: 0;
+
+    border-top: 1px solid #e2e9e5;
+
+    padding: 20px 16px 18px;
+  }
+
+  .document-visual-header {
+    font-size: 13px;
+  }
+
+  .document-verified {
+    min-height: 42px;
+
+    padding: 6px 10px;
+
+    font-size: 12px;
+  }
+
+  .document-image-wrapper {
+    padding: 8px 0;
+  }
+
+  .document-image-card {
+    height: 280px;
+
+    border-radius: 17px;
+  }
+
+  .document-image-note {
+    padding-left: 0;
+
+    font-size: 12px;
+  }
+
+  .document-controls {
+    padding-top: 20px;
+  }
+
+  .document-control {
+    width: 44px;
+    height: 44px;
+  }
+
+  .document-counter {
+    height: 44px;
+
+    min-width: 95px;
+  }
+
+  .documents-trust-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .documents-overview {
+    margin-top: 40px;
+  }
+
+  .documents-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-layout {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+  .business-visual {
+    min-height: 400px;
+    height: 400px;
+
+    border-radius: 0;
+
+    transform: translateY(0);
+  }
+
+  .business-visual::before {
+    top: 34px;
+
+    width: 390px;
+    height: 390px;
+  }
+
+  .business-visual .smart-search-phone {
+    top: 55px;
+
+    bottom: auto;
+
+    height: 660px;
+
+    transform: translateX(-50%) scale(0.7) !important;
+
+    transform-origin: center top;
+  }
+
+  .business-intro {
+    padding: 6px 4px 0;
+  }
+
+  .business-intro h2 {
+    font-size: 32px;
+  }
+
+  .business-intro-lead {
+    font-size: 13px;
+  }
+
+  .business-feature {
+    min-height: 44px;
+
+    font-size: 12px;
+  }
+
+  .business-cta {
+    margin-top: 24px;
+  }
+
+  .guard-layout {
+    max-width: 900px;
+
+    margin-top: 28px;
+  }
+
+  .business-visual.guard-visual {
+    min-height: 0;
+
+    height: auto;
+
+    overflow: visible;
+  }
+
+  .business-visual.guard-visual::before,
+  .business-visual.guard-visual::after {
+    display: none;
+  }
+
+  .business-visual.guard-visual .smart-search-phone {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    height: 720px;
+
+    transform: none !important;
+
+    transform-origin: center center;
+  }
+
+  .business-visual.guard-visual
+    .smart-search-phone
+    .phone3d-wrapper.guard-phone-shell {
+    transform: scale(0.82) !important;
+  }
+
+  .business-page-content .business-layout {
+    margin-top: -8px;
+  }
+
+  .business-page-content .business-how-it-works {
+    margin-top: 44px;
+
+    padding: 30px 12px 42px;
+
+    border-radius: 22px;
+  }
+
+  .business-page-content .business-section-heading {
+    margin-bottom: 28px;
+
+    text-align: left;
+  }
+
+  .business-page-content .business-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .business-page-content .business-section-heading p {
+    font-size: 12px;
+  }
+
+  .business-page-content .business-steps {
+    gap: 22px;
+
+    padding: 0 5px;
+  }
+
+  .business-page-content .business-steps::before {
+    left: 50%;
+
+    top: -14px;
+    bottom: -14px;
+  }
+
+  .business-page-content .business-step {
+    width: 78%;
+
+    min-height: 88px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      34px;
+
+    column-gap: 10px;
+
+    padding: 12px 14px 12px 16px;
+
+    border-radius: 42px;
+  }
+
+  .business-page-content .business-step:nth-child(odd) {
+    margin-right: auto;
+    margin-left: 0;
+
+    padding-left: 16px;
+    padding-right: 48px;
+
+    grid-template-columns:
+      34px
+      minmax(0, 1fr);
+  }
+
+  .business-page-content .business-step:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+
+    padding-left: 48px;
+    padding-right: 16px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      34px;
+  }
+
+  .business-page-content .business-step::before {
+    width: 76px;
+
+    font-size: 26px;
+  }
+
+  .business-page-content .business-step:nth-child(odd)::before {
+    right: -44px;
+
+    border-radius: 0 34px 34px 0;
+  }
+
+  .business-page-content .business-step:nth-child(even)::before {
+    left: -44px;
+
+    border-radius: 34px 0 0 34px;
+  }
+
+  .business-page-content .business-step:nth-child(odd) > .business-step-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .business-page-content .business-step:nth-child(even) > .business-step-icon {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .business-page-content .business-step-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .business-page-content .business-step:nth-child(odd) > h3,
+  .business-page-content .business-step:nth-child(odd) > p {
+    grid-column: 2;
+
+    width: 92%;
+
+    text-align: right;
+  }
+
+  .business-page-content .business-step:nth-child(even) > h3,
+  .business-page-content .business-step:nth-child(even) > p {
+    grid-column: 1;
+
+    width: 92%;
+
+    text-align: left;
+  }
+
+  .business-page-content .business-step > h3 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+  }
+
+  .business-page-content .business-step > p {
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .business-page-content .business-step {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+  .document-step,
+  .document-control,
+  .document-button,
+  .business-cta,
+  .guard-step,
+  .business-step {
+    transition: none;
+  }
+}

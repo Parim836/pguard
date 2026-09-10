@@ -5,18 +5,14 @@ function Contact() {
   const { t } = useLanguage();
 
   return (
-    <Page
-      title={t("ติดต่อเรา")}
-      subtitle={t("เราพร้อมดูแลคุณ")}
-    >
-
+    <Page title={t("ติดต่อเรา")} subtitle={t("เราพร้อมดูแลคุณ")}>
       <div className="contact-grid">
-
         <div className="contact-info">
-
           <h2>{t("พูดคุยกับทีม PGUARD")}</h2>
 
-          <p>{t("สอบถามรายละเอียดบริการ การใช้งาน หรือความร่วมมือทางธุรกิจ")}</p>
+          <p>
+            {t("สอบถามรายละเอียดบริการ การใช้งาน หรือความร่วมมือทางธุรกิจ")}
+          </p>
 
           <div className="contact-item">
             <b>{t("โทรศัพท์")}</b>
@@ -32,41 +28,22 @@ function Contact() {
             <b>LINE Official</b>
             <span>@pguard</span>
           </div>
-
         </div>
 
+        <form onSubmit={(e) => e.preventDefault()}>
+          <input placeholder={t("ชื่อ-นามสกุล")} />
 
-        <form
-          onSubmit={(e) => e.preventDefault()}
-        >
+          <input placeholder={t("อีเมล")} type="email" />
 
-          <input
-            placeholder={t("ชื่อ-นามสกุล")}
-          />
+          <input placeholder={t("เบอร์โทรศัพท์")} />
 
-          <input
-            placeholder={t("อีเมล")}
-            type="email"
-          />
+          <textarea placeholder={t("รายละเอียดที่ต้องการสอบถาม")} rows={6} />
 
-          <input
-            placeholder={t("เบอร์โทรศัพท์")}
-          />
-
-          <textarea
-            placeholder={t("รายละเอียดที่ต้องการสอบถาม")}
-            rows={6}
-          />
-
-          <button
-            className="btn primary"
-            type="submit"
-          >{t("ส่งข้อความ")}</button>
-
+          <button className="btn primary" type="submit">
+            {t("ส่งข้อความ")}
+          </button>
         </form>
-
       </div>
-
     </Page>
   );
 }

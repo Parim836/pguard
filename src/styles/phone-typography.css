@@ -8,17 +8,34 @@
   --phone-heading-weight: 500;
 }
 
-:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) {
+:where(
+  .phone-screen,
+  .app-screen,
+  .business-service-screen,
+  .report-floating-summary
+) {
   font-family: var(--phone-font-family);
   font-size: var(--phone-body-size);
   font-weight: var(--phone-body-weight);
 }
 
-:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) :where(button, input, textarea, small) {
+:where(
+    .phone-screen,
+    .app-screen,
+    .business-service-screen,
+    .report-floating-summary
+  )
+  :where(button, input, textarea, small) {
   font-family: var(--phone-font-family);
   font-size: var(--phone-body-size);
 }
 
-:where(.phone-screen, .app-screen, .business-service-screen, .report-floating-summary) :where(strong, b) {
+:where(
+    .phone-screen,
+    .app-screen,
+    .business-service-screen,
+    .report-floating-summary
+  )
+  :where(strong, b) {
   font-weight: var(--phone-heading-weight);
 }

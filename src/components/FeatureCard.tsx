@@ -9,7 +9,6 @@ function FeatureCard({
 }) {
   return (
     <article className="feature-card">
-
       <div className="icon-box">
         <Icon />
       </div>
@@ -17,7 +16,6 @@ function FeatureCard({
       <h3>{title}</h3>
 
       <p>{text}</p>
-
     </article>
   );
 }

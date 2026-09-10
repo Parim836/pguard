@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { features, additionalFeatures } from "../data/features";
 import { useLanguage } from "../LanguageContext";
-import "./SolutionAccordion.css";
+import "./styles/SolutionAccordion.css";
 
 const solutions = [...features, ...additionalFeatures];
 
@@ -25,11 +25,23 @@ function SolutionRow() {
           aria-label={language === "TH" ? feature.titleTh : feature.title}
           aria-controls={`solution-detail-${index}`}
         >
-          <span className="solution-number">{String(index + 1).padStart(2, "0")}</span>
-          <span className="solution-collapsed-title" aria-hidden="true">{language === "TH" ? feature.titleTh : feature.title}</span>
-          <span className="solution-detail" id={`solution-detail-${index}`} aria-hidden={active !== index}>
-            <span className="solution-title">{language === "TH" ? feature.titleTh : feature.title}</span>
-            <span className="solution-description">{language === "TH" ? feature.text : feature.textEn}</span>
+          <span className="solution-number">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <span className="solution-collapsed-title" aria-hidden="true">
+            {language === "TH" ? feature.titleTh : feature.title}
+          </span>
+          <span
+            className="solution-detail"
+            id={`solution-detail-${index}`}
+            aria-hidden={active !== index}
+          >
+            <span className="solution-title">
+              {language === "TH" ? feature.titleTh : feature.title}
+            </span>
+            <span className="solution-description">
+              {language === "TH" ? feature.text : feature.textEn}
+            </span>
           </span>
         </button>
       ))}

@@ -36,8 +36,9 @@ function Documents() {
       id: 1,
       title: t("บัตรประจำตัวประชาชน"),
       shortTitle: t("บัตรประชาชน"),
-      description:
-        t("ใช้สำหรับยืนยันตัวตนของผู้สมัคร ข้อมูลบนบัตรต้องตรงกับข้อมูลที่ใช้สมัคร PGUARD"),
+      description: t(
+        "ใช้สำหรับยืนยันตัวตนของผู้สมัคร ข้อมูลบนบัตรต้องตรงกับข้อมูลที่ใช้สมัคร PGUARD",
+      ),
       icon: CreditCard,
       requirements: [
         t("เห็นข้อมูลบนบัตรอย่างชัดเจน"),
@@ -52,8 +53,9 @@ function Documents() {
       id: 2,
       title: t("ใบอนุญาตประกอบอาชีพเจ้าหน้าที่รักษาความปลอดภัย"),
       shortTitle: t("ใบอนุญาต"),
-      description:
-        t("เอกสารยืนยันว่าผู้สมัครได้รับอนุญาตให้ประกอบอาชีพเจ้าหน้าที่รักษาความปลอดภัย ต้องเป็นเอกสารที่ออกโดยหน่วยงานที่เกี่ยวข้อง"),
+      description: t(
+        "เอกสารยืนยันว่าผู้สมัครได้รับอนุญาตให้ประกอบอาชีพเจ้าหน้าที่รักษาความปลอดภัย ต้องเป็นเอกสารที่ออกโดยหน่วยงานที่เกี่ยวข้อง",
+      ),
       icon: FileCheck2,
       requirements: [
         t("ใบอนุญาตต้องยังไม่หมดอายุ"),
@@ -68,8 +70,9 @@ function Documents() {
       id: 3,
       title: t("ใบรับรองการฝึกอบรม รปภ."),
       shortTitle: t("ใบรับรองการฝึก"),
-      description:
-        t("เอกสารรับรองการผ่านหลักสูตรหรือการฝึกอบรมที่เกี่ยวข้องกับการรักษาความปลอดภัย"),
+      description: t(
+        "เอกสารรับรองการผ่านหลักสูตรหรือการฝึกอบรมที่เกี่ยวข้องกับการรักษาความปลอดภัย",
+      ),
       icon: GraduationCap,
       requirements: [
         t("ชื่อผู้สมัครต้องเห็นได้อย่างชัดเจน"),
@@ -83,8 +86,9 @@ function Documents() {
       id: 4,
       title: t("ใบตรวจสอบประวัติ"),
       shortTitle: t("ใบตรวจประวัติ"),
-      description:
-        t("เอกสารสำหรับตรวจสอบประวัติของผู้สมัคร เพื่อสร้างความมั่นใจในการให้บริการและความปลอดภัยในการปฏิบัติงาน"),
+      description: t(
+        "เอกสารสำหรับตรวจสอบประวัติของผู้สมัคร เพื่อสร้างความมั่นใจในการให้บริการและความปลอดภัยในการปฏิบัติงาน",
+      ),
       icon: SearchCheck,
       requirements: [
         t("เอกสารต้องเป็นฉบับที่ออกโดยหน่วยงานที่เกี่ยวข้อง"),
@@ -99,8 +103,9 @@ function Documents() {
       id: 5,
       title: t("ใบอนุญาตขับขี่"),
       shortTitle: t("ใบขับขี่"),
-      description:
-        t("ใช้ยืนยันสิทธิ์ในการขับขี่ยานพาหนะ สำหรับงานรักษาความปลอดภัยที่มีความจำเป็นต้องใช้รถ"),
+      description: t(
+        "ใช้ยืนยันสิทธิ์ในการขับขี่ยานพาหนะ สำหรับงานรักษาความปลอดภัยที่มีความจำเป็นต้องใช้รถ",
+      ),
       icon: Car,
       requirements: [
         t("ข้อมูลในใบขับขี่ต้องตรงกับบัตรประจำตัวประชาชน"),
@@ -113,7 +118,6 @@ function Documents() {
     },
   ];
 
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   const activeDocument = documents[activeIndex];
@@ -121,26 +125,24 @@ function Documents() {
 
   const nextDocument = () => {
     setActiveIndex((current) =>
-      current === documents.length - 1 ? 0 : current + 1
+      current === documents.length - 1 ? 0 : current + 1,
     );
   };
 
   const previousDocument = () => {
     setActiveIndex((current) =>
-      current === 0 ? documents.length - 1 : current - 1
+      current === 0 ? documents.length - 1 : current - 1,
     );
   };
 
   return (
     <Page
       title={t("เอกสารสำหรับสมัครเป็น รปภ.")}
-      subtitle={t("เตรียมเอกสารให้ครบ เพื่อให้การสมัครกับ PGUARD เป็นเรื่องง่ายและรวดเร็วยิ่งขึ้น")}
+      subtitle={t(
+        "เตรียมเอกสารให้ครบ เพื่อให้การสมัครกับ PGUARD เป็นเรื่องง่ายและรวดเร็วยิ่งขึ้น",
+      )}
     >
       <section className="documents-page">
-
-        {/* =========================================================
-            STEP NAVIGATION
-        ========================================================= */}
         <div className="documents-steps">
           {documents.map((document, index) => {
             const StepIcon = document.icon;
@@ -149,9 +151,7 @@ function Documents() {
             return (
               <button
                 key={document.id}
-                className={`document-step ${
-                  isActive ? "active" : ""
-                }`}
+                className={`document-step ${isActive ? "active" : ""}`}
                 onClick={() => setActiveIndex(index)}
               >
                 <span className="document-step-number">
@@ -170,42 +170,28 @@ function Documents() {
           })}
         </div>
 
-        {/* =========================================================
-            MAIN PREVIEW
-        ========================================================= */}
         <div className="document-preview">
-
-          {/* =======================================================
-              LEFT — DOCUMENT INFORMATION
-          ======================================================= */}
           <div className="document-preview-info">
-
             <div className="document-label">
-              <span>{t("เอกสาร")} {String(activeDocument.id).padStart(2, "0")}
+              <span>
+                {t("เอกสาร")} {String(activeDocument.id).padStart(2, "0")}
               </span>
             </div>
 
             <h2>{activeDocument.title}</h2>
 
-            <p className="document-description">
-              {activeDocument.description}
-            </p>
+            <p className="document-description">{activeDocument.description}</p>
 
             <div className="document-requirements">
               <h3>{t("เอกสารที่ถูกต้องควรมีลักษณะดังนี้")}</h3>
 
               <div className="requirement-list">
-                {activeDocument.requirements.map(
-                  (requirement) => (
-                    <div
-                      className="requirement-item"
-                      key={requirement}
-                    >
-                      <CheckCircle2 size={18} />
-                      <span>{requirement}</span>
-                    </div>
-                  )
-                )}
+                {activeDocument.requirements.map((requirement) => (
+                  <div className="requirement-item" key={requirement}>
+                    <CheckCircle2 size={18} />
+                    <span>{requirement}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -217,11 +203,7 @@ function Documents() {
               </div>
             </div>
 
-            {/* =====================================================
-                CONTROLS
-            ===================================================== */}
             <div className="document-controls">
-
               <button
                 className="document-control secondary"
                 onClick={previousDocument}
@@ -231,15 +213,11 @@ function Documents() {
               </button>
 
               <div className="document-counter">
-                <strong>
-                  {String(activeDocument.id).padStart(2, "0")}
-                </strong>
+                <strong>{String(activeDocument.id).padStart(2, "0")}</strong>
 
                 <span>/</span>
 
-                <span>
-                  {String(documents.length).padStart(2, "0")}
-                </span>
+                <span>{String(documents.length).padStart(2, "0")}</span>
               </div>
 
               <button
@@ -249,17 +227,11 @@ function Documents() {
               >
                 <ArrowRight size={18} />
               </button>
-
             </div>
           </div>
 
-          {/* =======================================================
-              RIGHT — DOCUMENT PREVIEW
-          ======================================================= */}
           <div className="document-preview-visual">
-
             <div className="document-visual-header">
-
               <div className="document-verified">
                 <ShieldCheck size={20} />
                 <div className="document-verified-text">
@@ -270,19 +242,28 @@ function Documents() {
             </div>
 
             <div className="document-image-wrapper">
-
               <div className="document-image-card">
-
                 {activeDocument.id === 5 ? (
                   <svg
                     viewBox="163 121 1252 749"
                     role="img"
                     aria-label={`${t("ตัวอย่าง")} ${activeDocument.title}`}
-                    style={{ width: "88%", maxWidth: 900, maxHeight: "86%", marginLeft: 20 }}
+                    style={{
+                      width: "88%",
+                      maxWidth: 900,
+                      maxHeight: "86%",
+                      marginLeft: 20,
+                    }}
                   >
                     <defs>
                       <clipPath id="driving-license-card-outline">
-                        <rect x="163" y="121" width="1252" height="749" rx="36" />
+                        <rect
+                          x="163"
+                          y="121"
+                          width="1252"
+                          height="749"
+                          rx="36"
+                        />
                       </clipPath>
                     </defs>
                     <image
@@ -292,38 +273,33 @@ function Documents() {
                       clipPath="url(#driving-license-card-outline)"
                     />
                   </svg>
-                ) : <img
-                  src={activeDocument.image}
-                  alt={`${t("ตัวอย่าง")} ${activeDocument.title}`}
-                  className="document-preview-image"
-                />}
+                ) : (
+                  <img
+                    src={activeDocument.image}
+                    alt={`${t("ตัวอย่าง")} ${activeDocument.title}`}
+                    className="document-preview-image"
+                  />
+                )}
 
                 <div className="document-placeholder">
-                  <Icon
-                    size={54}
-                    strokeWidth={1.5}
-                  />
+                  <Icon size={54} strokeWidth={1.5} />
 
-                  <strong>
-                    {activeDocument.shortTitle}
-                  </strong>
+                  <strong>{activeDocument.shortTitle}</strong>
 
                   <span>{t("ตัวอย่างเอกสาร")}</span>
                 </div>
-
               </div>
-
             </div>
 
             <p className="document-image-note">
-              <Info size={13} />{t("รูปภาพนี้ใช้เพื่อเป็นตัวอย่างเท่านั้น กรุณาแนบเอกสารฉบับจริงของท่าน")}</p>
-
+              <Info size={13} />
+              {t(
+                "รูปภาพนี้ใช้เพื่อเป็นตัวอย่างเท่านั้น กรุณาแนบเอกสารฉบับจริงของท่าน",
+              )}
+            </p>
           </div>
         </div>
 
-        {/* =========================================================
-            TRUST BAR
-        ========================================================= */}
         <div className="documents-trust-bar">
           <div className="documents-trust-info">
             <span className="documents-trust-icon">
@@ -331,15 +307,20 @@ function Documents() {
             </span>
             <div className="documents-trust-text">
               <strong>{t("มั่นใจในความปลอดภัย")}</strong>
-              <span>{t("เอกสารของคุณจะถูกเก็บรักษาอย่างปลอดภัยตามนโยบายความเป็นส่วนตัวของ PGUARD")}</span>
+              <span>
+                {t(
+                  "เอกสารของคุณจะถูกเก็บรักษาอย่างปลอดภัยตามนโยบายความเป็นส่วนตัวของ PGUARD",
+                )}
+              </span>
             </div>
           </div>
 
           <a href="/privacy" className="documents-trust-link">
-            <Lock size={16} />{t("นโยบายความเป็นส่วนตัว")}<ChevronRight size={16} />
+            <Lock size={16} />
+            {t("นโยบายความเป็นส่วนตัว")}
+            <ChevronRight size={16} />
           </a>
         </div>
-
       </section>
     </Page>
   );

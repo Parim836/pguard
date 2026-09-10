@@ -1,0 +1,118 @@
+.rating-app-screen {
+  position: absolute;
+  inset: 0 0 12px;
+  overflow: clip;
+  border-radius: 43px 43px 34px 34px;
+  background: #fff;
+  color: #23342b;
+}
+.rating-app-screen::-webkit-scrollbar {
+  display: none;
+}
+.rating-app-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 55px 18px 18px;
+  background: #075738;
+  color: white;
+}
+.rating-app-header strong {
+  font-size: var(--phone-header-size);
+  font-weight: var(--phone-heading-weight);
+}
+.rating-app-body {
+  padding: 13px 20px 23px;
+}
+.rating-app-label {
+  font-size: var(--phone-heading-size);
+}
+.rating-app-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 0 30px;
+}
+.rating-app-summary > strong {
+  font-size: var(--phone-score-size);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  color: #10251b;
+}
+.rating-stars {
+  display: flex;
+  gap: 3px;
+  color: #e5a21c;
+}
+.rating-app-summary small {
+  font-size: var(--phone-body-size);
+  color: #718078;
+}
+.rating-score-list {
+  display: grid;
+  gap: 15px;
+}
+.rating-score-row {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--phone-body-size);
+}
+.rating-score-row b {
+  font-size: var(--phone-body-size);
+  font-weight: var(--phone-heading-weight);
+}
+.rating-score-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e4ebe6;
+}
+.rating-score-track > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #e5a21c;
+}
+.rating-customer-review {
+  margin-top: 35px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dfe8e2;
+}
+.rating-customer-review + .rating-customer-review {
+  margin-top: 16px;
+}
+.rating-review-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--phone-body-size);
+  color: #718078;
+}
+.rating-review-avatar {
+  display: flex;
+  padding: 7px;
+  border-radius: 50%;
+  background: #dcefe4;
+  color: #08783f;
+}
+.rating-review-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  color: #e5a21c;
+}
+.rating-customer-review p {
+  margin: 12px 0 0;
+  font-size: var(--phone-body-size);
+  line-height: 1.8;
+  color: #718078;
+}
+.smart-search-phone.rating-phone-preview .phone-screen {
+  background: #fff;
+}

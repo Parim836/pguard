@@ -1,4 +1,11 @@
-import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 import english from "./locales/en.json";
 
 type Language = "TH" | "EN";
@@ -18,9 +25,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   });
 
-  const t = useCallback((text: TranslationKey) => {
-    return language === "EN" ? english[text] : text;
-  }, [language]);
+  const t = useCallback(
+    (text: TranslationKey) => {
+      return language === "EN" ? english[text] : text;
+    },
+    [language],
+  );
 
   useEffect(() => {
     document.documentElement.lang = language.toLowerCase();
